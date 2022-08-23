@@ -14,7 +14,7 @@ class CreateShippingsTable extends Migration
     public function up()
     {
         Schema::create('shippings', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('city');
             $table->decimal('price',8,2);
             $table->timestamps();

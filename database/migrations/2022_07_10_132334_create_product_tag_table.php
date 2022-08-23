@@ -14,7 +14,7 @@ class CreateProductTagTable extends Migration
     public function up()
     {
         Schema::create('product_tag', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->foreignId('product_id')->nullable()->constrained('products');
             $table->foreignId('tag_id')->nullable()->constrained('tags');
             $table->timestamps();
